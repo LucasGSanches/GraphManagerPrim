@@ -85,10 +85,21 @@ public class GrafoGUI extends JFrame {
 		
 		//...
 		
+		if(!vertices.isEmpty() && !arestas.isEmpty()){
+			int i;
+			arvoreGerada = true;
+			for(i = 0; i < vertices.size() - 1; i++){
+				
+			}
+		}
+		
 		//Se deu certo fazer a árvore, atualizar o grafo
 		if(arvoreGerada){
 			arestas.clear();
 			arestas.addAll(arestastemp);
+		}
+		else{
+			outputArea.setText("Nao foi possivel gerar Arvore Minima");
 		}
 	}
 	
