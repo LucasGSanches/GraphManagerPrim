@@ -77,7 +77,19 @@ public class GrafoGUI extends JFrame {
 	//Nova funcao para o trabalho de grafos
 	
 	private void gerarArvoreMinima(){
-		System.out.println("teste");
+		boolean arvoreGerada = false;
+		//Listas temporarias para usar na funcao
+		List<Ponto> verticestemp = new ArrayList<>();
+		List<Aresta> arestastemp = new ArrayList<>();
+		//Implementar a arvore geradora minima PRIM aqui, usando as listas temporárias
+		
+		//...
+		
+		//Se deu certo fazer a árvore, atualizar o grafo
+		if(arvoreGerada){
+			arestas.clear();
+			arestas.addAll(arestastemp);
+		}
 	}
 	
     private void limparTudo(JPanel painel) {
