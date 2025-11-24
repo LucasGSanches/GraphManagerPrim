@@ -17,7 +17,7 @@ public class GrafoGUI extends JFrame {
 
     public GrafoGUI() {
         setTitle("Editor de Grafos - Ferramenta Didática");
-        setSize(1000, 700);
+        setSize(1200, 700);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
@@ -36,7 +36,7 @@ public class GrafoGUI extends JFrame {
         String[] nomes = {
             "Novo Vértice", "Nova Aresta", "Passeio", "Trilha",
             "Caminho", "Ciclo", "Conectividade", "Componentes",
-            "Matriz", "Limpar Tudo"
+            "Matriz", "Arvore Geradora Minima", "Limpar Tudo"
         };
 
         for (final String nome : nomes) {
@@ -54,6 +54,7 @@ public class GrafoGUI extends JFrame {
                     else if (nome.equals("Conectividade")) verificarConectividade();
                     else if (nome.equals("Componentes")) identificarComponentes();
                     else if (nome.equals("Matriz")) mostrarMatrizAdjacencia();
+                    else if (nome.equals("Arvore Geradora Minima")) gerarArvoreMinima();
                     else if (nome.equals("Limpar Tudo")) limparTudo(painel);
                     painel.repaint();
                 }
@@ -71,7 +72,14 @@ public class GrafoGUI extends JFrame {
         corComponentes.clear();
         outputArea.setText("Modo atual: " + modo + "\n");
     }
-
+    
+    
+	//Nova funcao para o trabalho de grafos
+	
+	private void gerarArvoreMinima(){
+		System.out.println("teste");
+	}
+	
     private void limparTudo(JPanel painel) {
         vertices.clear();
         arestas.clear();
